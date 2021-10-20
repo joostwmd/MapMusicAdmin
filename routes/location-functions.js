@@ -3,6 +3,7 @@ const Location = require("../models/Location.js");
 
 //get all locations
 router.get("/locations", (req, res, next) => {
+    console.log("backend")
     Location.find()
             .then(locations => {
               res.status(200).json(locations)
@@ -15,7 +16,7 @@ router.get("/locations/:id", (req, res, next) => {
     console.log("backend", req.params.id)
     Location.findById(req.params.id)
             .then(location => {
-                console.log("backend", location)
+                console.log("backend",location)
                 res.status(200).json(location)
             })
             .catch(err => next(err))
@@ -63,7 +64,7 @@ router.delete('/locations/:id', (req, res, next) => {
   });
 
 //edit location
-router.put('/locations/edit/:id', (req, res, next) => {
+router.post('/locations/edit/:id', (req, res, next) => {
 	const { newName, newLongitude, newLatitude } = req.body;
 	Location.findByIdAndUpdate(req.params.id, { name: newName,  coordinates : [Number(newLatitude), Number(newLongitude)] }, { new: true })
 		.then(updatedProject => {

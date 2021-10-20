@@ -27,7 +27,7 @@ function ListLocations() {
 
             {locations.map(location => {
                 return (
-                    <div key={location._id}>
+                    <div onClick={console.log(location._id)} key={location._id}>
                         <h3>
                             <Link to={`/locations/${location._id}`}>{location.name}</Link>
                         </h3>

@@ -11,6 +11,8 @@ import ListLocations from './components/ListLocations';
 import LocationDetail from './components/LocationDetail';
 
 import AddEvent from './components/AddEvent';
+import ListEvents from './components/ListEvents';
+import EventDetail from './components/EventDetail';
 
 
 function App() {
@@ -26,6 +28,9 @@ function App() {
           <Route exact path="/locations/:id" render={props => <LocationDetail {...props} />} />
 
           <Route exact path="/addEvent" component={AddEvent} />
+          <Route exact path="/events" component={ListEvents} />
+          <Route exact path="/events/:id" render={props => <EventDetail {...props} />} />
+          
         </Switch>
       </BrowserRouter>
     </div>

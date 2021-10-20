@@ -38,26 +38,26 @@
 }
 
 
-#addEvents{
+#addEvent{
   display: flex;
   flex-direction: column;
   align-items: center ;
 
 }
 
-#addEvents > input{
+#addEvent > input{
   width: 150px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-#addEvents > select{
+#addEvent > select{
   width: 150px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-#addEvents > button{
+#addEvent > button{
   width: 150px;
   margin-top: 5px;
   margin-bottom: 25px;
